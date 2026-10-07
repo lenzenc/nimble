@@ -10,6 +10,18 @@ By default it writes a self-contained HTML report (`reports/nimble-report.html`,
 probability distribution, expected vs actual, the policy action, latency/token stats and the
 raw request/response.
 
+### Sample output
+
+![nimble report: summary tiles and noul cases](docs/report-preview.png)
+
+Ordered `score` questions show the distribution plus a marker for the weighted score, and
+policies (here, fraud risk -> block) are applied on top:
+
+![nimble report: score cases](docs/report-preview-score.png)
+
+The full report from a real run is saved as [`docs/sample-report.html`](docs/sample-report.html)
+(download it and open it in a browser; it is a single self-contained file).
+
 ```sh
 uv run nimble_demo.py                    # HTML report, opened in the browser
 uv run nimble_demo.py --no-open          # write the report without opening it
